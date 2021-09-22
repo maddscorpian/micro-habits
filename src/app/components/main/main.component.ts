@@ -10,6 +10,7 @@ import { HABITS } from 'src/app/models/stubs/mock-habits';
 export class MainComponent implements OnInit {
 
   habits? : Habit[];
+  count?: number;
 
   constructor() { }
 

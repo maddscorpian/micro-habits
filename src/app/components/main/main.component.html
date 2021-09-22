@@ -5,12 +5,19 @@
                 <div class="card h-100">
                     <!-- Product image-->
                     <!-- <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." /> -->
-                    <mat-icon>account_box</mat-icon>
+                    
                     <!-- Product details-->
                     <div class="card-body p-4">
                         <div class="text-center">
                             <!-- Product name-->
+                            <mat-icon class="card-img-top">{{habit.logo}}</mat-icon>
                             <h5 class="fw-bolder">{{habit.name}}</h5>
+                            <br>
+                            <div class="md-form">
+                                <input mdbInput type="text" name="count" [(ngModel)]="count" id="form1" class="form-control">
+                              </div>
+                            <br>
+                            
                             <!-- Product reviews-->
                             <div class="d-flex justify-content-center small text-warning mb-2">
                                 <div class="bi-star-fill"></div>
