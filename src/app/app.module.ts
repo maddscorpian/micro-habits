@@ -11,6 +11,11 @@ import {MatIconModule} from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
+import { HabitComponent } from './components/habit/habit.component';
+import { HabitLogComponent } from './components/habit-log/habit-log.component';
+import { HabitReportComponent } from './components/habit-report/habit-report.component';
+import {HttpClientModule} from '@angular/common/http';
+
 
 
 
@@ -20,15 +25,19 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     HeaderComponent,
     MainComponent,
-    FooterComponent
+    FooterComponent,
+    HabitComponent,
+    HabitLogComponent,
+    HabitReportComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     MatIconModule,
     BrowserAnimationsModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
