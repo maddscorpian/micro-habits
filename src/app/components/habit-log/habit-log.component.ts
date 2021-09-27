@@ -42,9 +42,11 @@ export class HabitLogComponent implements OnInit {
       alert("Habit not selected.");
       return;
     }
+
     var val={
       name:this.name,
-      count:this.count
+      count: this.count,
+      ts:new Date()
     };
 
     this.http.post(environment.API_URL+'habit-log',val)
@@ -64,8 +66,6 @@ export class HabitLogComponent implements OnInit {
     this.http.get<any>(environment.API_URL+'habit-log')
     .subscribe(data=>{
       this.habitLog=data;
-      alert(this.habitLog[0]._id);
-      
     });
   }
 
